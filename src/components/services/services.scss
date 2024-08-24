@@ -1,0 +1,188 @@
+@import "../../app.scss";
+
+.services {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mobile {
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 24px;  // Increased font size for better readability
+      color: lightgray;
+      text-align: right;
+
+      @include mobile {
+        font-size: 18px; // Adjusted for mobile
+        text-align: center;
+      }
+    }
+
+    hr {
+      width: 600px;  // Widened the line to match larger boxes
+      border: none;
+      border-top: 1px solid lightgray;
+
+      @include mobile {
+        width: 300px;
+      }
+    }
+  }
+
+  .titleContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      img {
+        width: 350px;  // Increased image size
+        height: 150px;
+        border-radius: 50px;
+        object-fit: cover;
+
+        @include mobile {
+          width: 250px;
+          height: 100px;
+        }
+      }
+
+      h1 {
+        font-size: 108px;  // Increased heading size for more impact
+        font-weight: 300;
+        color: orange; // Changed color for more contrast
+
+        @include mobile {
+          font-size: 42px; // Adjusted for mobile
+        }
+      }
+
+      button {
+        width: 350px;  // Increased button size
+        height: 120px;
+        border-radius: 50px;
+        background-color: orange;
+        border: none;
+        font-size: 28px;  // Increased font size
+        cursor: pointer;
+        font-weight: bold; // Increased font weight
+
+        @include mobile {
+          font-size: 18px;
+          width: 180px;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  .listContainer {
+    padding-top: 40px;
+    flex: 2;
+    display: flex;
+    max-width: 1366px;
+    margin: 0 auto;  // Center the container horizontally
+    gap: 20px; // Added space between boxes
+    flex-wrap: wrap; // Allows boxes to wrap to the next line if necessary
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .box {
+      flex: 1 1 calc(33.333% - 20px); // Flex-grow, flex-shrink, and base width for boxes
+      padding: 80px;  // Increased padding for larger boxes
+      border: 1px solid lightgray;  // Changed to lightgray for better contrast
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #1c1c3d;  // Added background color for better contrast
+      border-radius: 20px; // Added border-radius for smooth corners
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); // Added shadow for depth
+
+      @include mobile {
+        border: none;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        flex: 1 1 100%; // Ensure boxes take full width on mobile
+      }
+
+      p {
+        margin: 20px;
+        font-size: 20px;  // Increased font size for text inside boxes
+        color: lightgray;
+        &:hover {
+      
+          color: black;  // Changed font color to black on hover
+        }
+
+
+        @include mobile {
+          font-size: 16px; // Adjusted for mobile
+          text-align: center;
+        }
+      }
+
+      button {
+        padding: 15px;  // Increased button padding
+        background-color: orange;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;  // Increased font size
+        font-weight: bold;
+        border-radius: 10px; // Added border-radius for smooth corners
+        transition: background-color 0.3s ease, color 0.3s ease; // Added transition for color change
+
+        &:hover {
+          background-color: darkorange;  // Added hover effect
+          color: black;  // Changed font color to black on hover
+        }
+
+        @include mobile {
+          background-color: transparent;
+          border: 2px solid orange;
+          border-radius: 10px;
+          color: orange;
+          width: 60%;
+          padding: 10px;
+        }
+      }
+
+      .heading {  // Added class for spacing between heading and button
+        margin-bottom: 20px;  // Space between heading and button
+      }
+    }
+  }
+}
